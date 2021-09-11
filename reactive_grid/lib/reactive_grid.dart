@@ -150,7 +150,7 @@ class _ReactiveSquareState extends State<ReactiveSquare>
         -(distancePos.dx / square.size.height),
         0,
       ),
-      min(2 * pi, (distance / square.size.height / 2) + pi),
+      min(2 * pi, (distance / square.size.height)),
     );
     return current;
   }
@@ -182,3 +182,88 @@ class _ReactiveSquareState extends State<ReactiveSquare>
     );
   }
 }
+
+// Waves Rotation
+// if (cursorPos == Offset.zero) {
+//       return Matrix4.identity();
+//     }
+
+//     // Current square renderbox
+//     final square = context.findRenderObject() as RenderBox?;
+//     if (square == null) {
+//       return Matrix4.identity();
+//     }
+
+//     // Find the center of the current square
+//     final centerPos =
+//         square.localToGlobal(square.size.bottomCenter(Offset.zero));
+
+//     // Find the distance from the center
+//     final distance = (centerPos - cursorPos).distance;
+
+//     // Find the circle around
+//     final threshold = square.size.longestSide + widget.radius;
+
+//     // if (min(
+//     //       1,
+//     //       (distance / threshold).clamp(widget.smallest, 1),
+//     //     ) ==
+//     //     1) return Matrix4.identity();
+
+//     final distancePos = (centerPos - cursorPos);
+
+//     // Scaling math
+//     Matrix4 current = Matrix4.identity();
+//     // current.rotateX(pi / (distance.dy / square.size.width));
+//     // current.rotateY(-pi / (distance.dx / square.size.height));
+//     current.rotate(
+//         Vector3(
+//           (distancePos.dy/ square.size.width),
+//           -(distancePos.dx / square.size.height),
+//           0,
+//         ),
+//         distance / square.size.height/2);
+//     return current;
+
+// Circular Rotation
+// if (cursorPos == Offset.zero) {
+//       return Matrix4.identity();
+//     }
+
+//     // Current square renderbox
+//     final square = context.findRenderObject() as RenderBox?;
+//     if (square == null) {
+//       return Matrix4.identity();
+//     }
+
+//     // Find the center of the current square
+//     final centerPos =
+//         square.localToGlobal(square.size.bottomCenter(Offset.zero));
+
+//     // Find the distance from the center
+//     final distance = (centerPos - cursorPos).distance;
+
+//     // Find the circle around
+//     final threshold = square.size.longestSide + widget.radius;
+
+//     // if (min(
+//     //       1,
+//     //       (distance / threshold).clamp(widget.smallest, 1),
+//     //     ) ==
+//     //     1) return Matrix4.identity();
+
+//     final distancePos = (centerPos - cursorPos);
+
+//     // Scaling math
+//     Matrix4 current = Matrix4.identity();
+//     // current.rotateX(pi / (distance.dy / square.size.width));
+//     // current.rotateY(-pi / (distance.dx / square.size.height));
+//     current.rotate(
+//       Vector3(
+//         (distancePos.dy / square.size.width),
+//         -(distancePos.dx / square.size.height),
+//         0,
+//       ),
+//       min(2 * pi, (distance / square.size.height / 2) + pi),
+//     );
+//     return current;
