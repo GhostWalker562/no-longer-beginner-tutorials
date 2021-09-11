@@ -145,12 +145,13 @@ class _ReactiveSquareState extends State<ReactiveSquare>
     // current.rotateX(pi / (distance.dy / square.size.width));
     // current.rotateY(-pi / (distance.dx / square.size.height));
     current.rotate(
-        Vector3(
-          (distancePos.dy/ square.size.width),
-          -(distancePos.dx / square.size.height),
-          0,
-        ),
-        distance / square.size.height/2);
+      Vector3(
+        (distancePos.dy / square.size.width),
+        -(distancePos.dx / square.size.height),
+        0,
+      ),
+      min(2 * pi, (distance / square.size.height / 2) + pi),
+    );
     return current;
   }
 
