@@ -40,14 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
       {required IndexedWidgetBuilder itemBuilder}) {
     return Center(
       child: SizedBox(
-        width: 200,
-        height:200,
+        width: 1000,
         child: GridView.builder(
           clipBehavior: Clip.none,
           shrinkWrap: true,
-          itemCount:  9 ?? (1200 / 5).round(),
+          itemCount: (1200 / 5).round(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
+            crossAxisCount: 20,
             mainAxisSpacing: 12,
             crossAxisSpacing: 12,
           ),

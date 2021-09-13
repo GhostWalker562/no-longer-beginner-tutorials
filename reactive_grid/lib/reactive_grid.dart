@@ -112,40 +112,40 @@ class _ReactiveSquareState extends State<ReactiveSquare>
   }
 
   Matrix4 _calculateRotation(Offset cursorPos) {
-    if (cursorPos == Offset.zero) {
-      return Matrix4.identity();
-    }
+    // if (cursorPos == Offset.zero) {
+    return Matrix4.identity();
+    // }
 
-    // Current square renderbox
-    final square = context.findRenderObject() as RenderBox?;
-    if (square == null) {
-      return Matrix4.identity();
-    }
+    // // Current square renderbox
+    // final square = context.findRenderObject() as RenderBox?;
+    // if (square == null) {
+    //   return Matrix4.identity();
+    // }
 
-    // Find the center of the current square
-    final centerPos = square.localToGlobal(square.size
-        .bottomCenter(Offset.zero)
-        .translate(0, -square.size.height / 2));
+    // // Find the center of the current square
+    // final centerPos = square.localToGlobal(square.size
+    //     .bottomCenter(Offset.zero)
+    //     .translate(0, -square.size.height / 2));
 
-    // Find the distance from the center
-    final distance = (centerPos - cursorPos).distance.abs();
+    // // Find the distance from the center
+    // final distance = (centerPos - cursorPos).distance.abs();
 
-    final distancePos = (cursorPos - centerPos );
-    // Scaling math
-    Matrix4 current = Matrix4.identity();
-    current.setRotationX((distancePos.dy.abs() + widget.radius) / square.size.height / pi);
-    current.setRotationY((distancePos.dx.abs() + widget.radius) / square.size.height / pi);
-    current.setRotationZ( distance / square.size.height / pi);
-    // current.
-    // current.rotate(
-    //   Vector3(
-    //     -(distancePos.dy / square.size.width),
-    //     (distancePos.dx / square.size.height),
-    //     0,
-    //   ),
-    //   min(2* pi, distance / square.size.height),
-    // );
-    return current;
+    // final distancePos = (cursorPos - centerPos );
+    // // Scaling math
+    // Matrix4 current = Matrix4.identity();
+    // current.setRotationX((distancePos.dy.abs() + widget.radius) / square.size.height / pi);
+    // current.setRotationY((distancePos.dx.abs() + widget.radius) / square.size.height / pi);
+    // current.setRotationZ( distance / square.size.height / pi);
+    // // current.
+    // // current.rotate(
+    // //   Vector3(
+    // //     -(distancePos.dy / square.size.width),
+    // //     (distancePos.dx / square.size.height),
+    // //     0,
+    // //   ),
+    // //   min(2* pi, distance / square.size.height),
+    // // );
+    // return current;
   }
 
   @override
