@@ -15,6 +15,13 @@ https://youtu.be/OEtt_8_FU0s
 
  https://youtu.be/xFIjv0GD_Wk
 
+## MetaMask Integration
+
+<!-- ![2021-09-14 01-45-35 00_06_44_37 Still001](https://user-images.githubusercontent.com/43276017/133346522-32441c6b-f1c6-44c0-85b0-743a057b96db.png)  -->
+<img src="https://user-images.githubusercontent.com/43276017/133346522-32441c6b-f1c6-44c0-85b0-743a057b96db.png" height="310">
+
+https://youtu.be/8qzVDje3IWk
+
 ## Gradient Dropshadows 
 
 ![image](https://user-images.githubusercontent.com/43276017/131542870-173662bc-9765-45f5-9f40-d1ffb7e04ce7.png)
